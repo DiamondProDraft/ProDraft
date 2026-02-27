@@ -1,0 +1,183 @@
+/* our colors
+    grey = #BABFB7
+    blue = #02243E
+    orange = #FE5000
+*/
+/*
+#peopleData{
+	border: 5px;
+	border-color: #BABFB7;
+}
+#peopleData th{
+	border: 2px;
+	border-color: #BABFB7;
+}
+*/
+h2{
+	font-size: 20px;
+}
+
+.hourTable {
+	position:absolute;
+	float: down;
+}
+
+.selectID {
+    width: 120px;
+    height: 23px;
+}
+
+.selectName {
+    width: 180px;
+    height: 23px;
+}
+
+.sortButton {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+
+.sortButton:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sortButton:active {
+  background-color: #000000;
+  color: white;
+}
+
+.selectSubmit {
+    height: 23px;
+}
+
+.timeActual {
+    text-align: center;
+    color: #FF0000;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.updateStudentName {
+    text-align: left;
+    color: #FF0000;
+    font-size: 14px;
+}
+
+.successCheckmark{
+    color: green;
+    font-size: 24px;
+    visibility: hidden;
+}
+
+#personData{
+	float: right;
+}
+
+.userTable{
+    width:170px;
+    text-align:left;
+}
+
+.userTableTeam{
+    width:70px;
+    text-align:left;
+}
+
+.userTableActive{
+    width:70px;
+    text-align:middle;
+}
+
+#tableBody {
+
+}
+
+#hereTable, #noOneHereBox, #notAuthorizedBox{
+	display: none;
+}
+
+/****************************/
+/* CSS for collapsible area */
+/****************************/
+.toolsCollapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 8px;
+  width: 25%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add background color to the button if it is clicked, and on mouse over (hover) */
+.toolsCollapsible.active, .toolsCollapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.toolsContent {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #02243E;
+}
+
+.toolsCollapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.toolsCollapsible.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/****************************/
+/* CSS for collapsible import area */
+/****************************/
+.importCollapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 4px;
+  width: 15%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Add background color to the button if it is clicked, and on mouse over (hover) */
+.importCollapsible.active, .importCollapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.importContent {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #02243E;
+}
+
+.importCollapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.importCollapsible.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}

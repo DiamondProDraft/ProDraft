@@ -1,0 +1,65 @@
+/* our colors
+grey = #BABFB7
+blue = #02243E
+orange = #FE5000
+*/
+
+#middle{
+	padding-left: 15px;
+	display: inline-block;
+}
+
+#result {
+	display: block;
+	font-size: 50px;
+}
+
+#greenBox{
+	display: inline-block;
+	position: relative;
+	left:0;
+	visibility: hidden;
+}
+
+#yellowBox{
+	position: absolute;
+	left:0;
+	visibility: hidden;
+}
+
+#redBox{
+	position: absolute;
+	left:0;
+	visibility: hidden;
+}
+
+.switchBox{
+	display: flex;
+	padding-bottom: 15px;
+	align-items: center; /* Vertically center the switch box */
+}
+
+h1{
+	font-size: 30px;
+}
+
+.checkInSelected{
+    color: #00FF00;
+    opacity: 1.0;
+    font-size:40px;
+}
+
+.checkOutSelected{
+    color: grey;
+    opacity: 0.2;
+    font-size:40px;
+}
+
+.permWarning {
+    font-size: 16px;
+}
+
+/*
+#topBody{
+	font-size: 20px;
+}*/
