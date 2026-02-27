@@ -11,7 +11,7 @@ you are about to use javascript you may end up throwing your device out the wind
     The entryList[] was an attempt, along with addToEntryList and renderTest
 */
 
-import {admins, people, realTimeDataBase, loadExternalHTML, initFirebaseAuth, checkPermissions, firestore, today} from './Scripts.js';
+import {admins, people, loadExternalHTML, initFirebaseAuth, checkPermissions, firestore, today} from './Scripts.js';
 
 const studentSelection = $('#studentSelection');
 const peopleTable = $('#peopleData');

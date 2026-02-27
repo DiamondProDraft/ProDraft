@@ -1,5 +1,5 @@
 //JS for scanIn.html
-import {people, firestore, admins, configuration, realTimeDataBase, loadExternalHTML, initFirebaseAuth, checkPermissions, sleep} from './Scripts.js';
+import {people, firestore, admins, configuration, loadExternalHTML, initFirebaseAuth, checkPermissions, sleep} from './Scripts.js';
 
 export var authenticatedUsers = firestore.collection("googleSignIn");
 
@@ -136,38 +136,6 @@ async function onFoundBarcode(IdNumber){
 						clockOutMinute: 99,
 						hourType: type
 					});
-					
-					
-					realTimeDataBase.ref('users/').once('value').then((snapshot) => {
-						console.log('RTDB logging')
-	
-						var peopleList = snapshot.val().here;
-						console.log("peopleList RTDB:");
-						console.log(peopleList);
-						//this if statement is broken
-						if (peopleList === [["null", "null", "null"]]){
-							peopleList = [];
-							console.log("nulls cleared");
-						}
-						peopleList.push([Studentdoc.id, Studentdoc.data().firstName, Studentdoc.data().lastName]);
-						console.log("peopleList before write");
-						console.log(peopleList);						
-						
-						realTimeDataBase.ref('users/').set({
-							here: peopleList
-						});
-					}).catch(function(error) {
-						checkPermissions(error, function(err){
-						
-							console.log("purge RTDB");
-							// purges the database and adds the person
-							console.log(err);
-							var peopleList = [[Studentdoc.id, Studentdoc.data().firstName, Studentdoc.data().lastName]];
-							realTimeDataBase.ref('users/').set({
-								here: peopleList
-							});
-						});
-					});
 
 					reset();
 
@@ -185,30 +153,6 @@ async function onFoundBarcode(IdNumber){
                             clockOutMinute: MINUTE,
                             hourType: type
                         });
-
-                        realTimeDataBase.ref('users/').once('value').then((snapshot) => {
-                            var peopleList = snapshot.val().here;
-                            console.log(peopleList);
-
-                            // remove that element
-                            peopleList = peopleList.filter(function(el) {
-                                if(el[0] === Studentdoc.id){
-                                    return;
-                                }else{
-                                    return el
-                                }
-
-                            });
-                            if (peopleList.length === 0){
-                                peopleList = [["null","null","null"]];
-                            }
-                            console.log(peopleList);
-
-                            realTimeDataBase.ref('users/').set({
-                                here: peopleList
-                            });
-                        });
-
                     } else {
                         // user attempted to clock out again but still hasn't clocked in
                         redBox.css('visibility', 'visible');

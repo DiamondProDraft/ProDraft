@@ -9,7 +9,6 @@ export var configuration = firestore.collection("Configuration");
 export var user = firebase.auth().currentUser;
 
 export var auth = firebase.auth();
-export var realTimeDataBase = firebase.database();
 
 /*
 function signIn() {

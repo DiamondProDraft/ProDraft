@@ -4,7 +4,7 @@
 you are about to use javascript you may end up throwing your device out the window
 */
 
-import {admins, people, configuration, realTimeDataBase, loadExternalHTML, initFirebaseAuth, checkPermissions, firestore, today, todayDate} from './Scripts.js';
+import {admins, people, configuration, loadExternalHTML, initFirebaseAuth, checkPermissions, firestore, today, todayDate} from './Scripts.js';
 
 const toolsSection = $('#toolsSection');
 const importSection = $('#importSection');
@@ -944,66 +944,6 @@ function search(){
     });
 }
 
-function checkoutAll(){
-	realTimeDataBase.ref('users/').once('value').then((snapshot) => {
-
-		var time = new Date();
-
-		var checkoutHour = time.getHours();
-		var checkoutMinute = time.getMinutes();
-
-        // if the clock field is set, use that value
-        var checkoutTime  = document.getElementById("checkoutTime").value;
-        if( checkoutTime != ""){
-            checkoutHour   = Number( checkoutTime.substring(0,2));
-            checkoutMinute = Number( checkoutTime.substring(3));
-        }
-
-		var year = String(time.getFullYear());
-		var month = String(time.getMonth() +1); // month +1 because index starts at 0
-		var day = String(time.getDate());
-		
-		month = (month.length == 1)? '0' + month : month;
-		day = (day.length == 1)? '0' + day : day;
-
-		var peopleList = snapshot.val().here;
-
-		var docName = month + day + year;
-
-		peopleList.forEach(function(element){
-			var studentID = element[0];
-			
-			if(studentID != "N/A"){
-
-			var docRefLog = people.doc(studentID).collection("logs").doc(docName);
-
-			docRefLog.get().then(function(logDoc){
-				if(logDoc.exists){
-					docRefLog.set({
-						clockInHour: logDoc.data().clockInHour,
-						clockInMinute: logDoc.data().clockInMinute,
-						clockOutHour: checkoutHour,
-						clockOutMinute: checkoutMinute,
-						hourType: logDoc.data().hourType
-					});
-				}
-			});
-			}
-		});
-
-		peopleList = [["null","null","null"]];
-
-		realTimeDataBase.ref('users/').set({
-			here: peopleList
-		});
-		updateStudentInfoFromRecordReset();
-	}).catch(function(error) {
-		checkPermissions(error, function(err){
-			console.error(err);
-		});
-	});
-}
-
 function clearTextBoxes(){
 	teamSelect.val("none");
 	IDBox.val("");
@@ -1214,10 +1154,6 @@ function setup(){
     }).catch(function(){
         permWarning.css('display','block');
     });
-
-	realTimeDataBase.ref('users/').on('value', (snapshot) => {
-		refreshRealTime(snapshot);
-	});
 }
 
 setup();

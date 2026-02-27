@@ -4,7 +4,7 @@
 you are about to use javascript you may end up throwing your device out the window
 */
 
-import {admins, people, realTimeDataBase, loadExternalHTML, initFirebaseAuth, checkPermissions, firestore, today} from './Scripts.js';
+import {admins, people, loadExternalHTML, initFirebaseAuth, checkPermissions, firestore, today} from './Scripts.js';
 
 const dataTableBody = $('#tableBody');
 const healthyDataMessage = $("#healthyDataMessage");
