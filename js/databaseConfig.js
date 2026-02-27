@@ -2,22 +2,22 @@
 
 /* prod environment */
 //export var firebaseConfig = {
-//	apiKey: "AIzaSyBQiIjrNDtP2A5-gNAOakkaeieoLWvpwqQ",
-//	authDomain: "hourtracker-2b6f8.firebaseapp.com",
-//	projectId: "hourtracker-2b6f8",
-//	storageBucket: "hourtracker-2b6f8.appspot.com",
-//	messagingSenderId: "82969866110",
-//	appId: "1:82969866110:web:5a089299065444cbea0d2f",
-//	measurementId: "G-DS4GRL509N"
+//  apiKey: "AIzaSyAo96HVWzjQmXBRtVM0gtBt287gSmTDsFA",
+//  authDomain: "prodraft-a5377.firebaseapp.com",
+//  projectId: "prodraft-a5377",
+//  storageBucket: "prodraft-a5377.firebasestorage.app",
+//  messagingSenderId: "491994095062",
+//  appId: "1:491994095062:web:dac72a72a1bb71429b1877",
+//  measurementId: "G-HRRQG2JDQV"
 //};
 
 /* Dev environment */
 export var firebaseConfig = {
-	apiKey: "AIzaSyBBKYArtrboS7J7wx5m79UI23qAXUNw35A",
-	authDomain: "hourtracker-dev.firebaseapp.com",
-	projectId: "hourtracker-dev",
-	storageBucket: "hourtracker-dev.appspot.com",
-	messagingSenderId: "498726906777",
-    appId: "1:498726906777:web:d1f20357138a4373724108",
-    measurementId: "G-F4V5WTTJE5"
+    apiKey: "AIzaSyCeOjqM1NkgRgIMMYWoCCXDQmtS1Tb4O6A",
+    authDomain: "prodraft-dev.firebaseapp.com",
+    projectId: "prodraft-dev",
+    storageBucket: "prodraft-dev.firebasestorage.app",
+    messagingSenderId: "1024030304257",
+    appId: "1:1024030304257:web:2c63628adafef57854f800",
+    measurementId: "G-C4VYQ1GDM9"
 };
