@@ -2,13 +2,13 @@
 
 /* prod environment */
 export var firebaseConfig = {
-	apiKey: "AIzaSyBQiIjrNDtP2A5-gNAOakkaeieoLWvpwqQ",
-	authDomain: "hourtracker-2b6f8.firebaseapp.com",
-	projectId: "hourtracker-2b6f8",
-	storageBucket: "hourtracker-2b6f8.appspot.com",
-	messagingSenderId: "82969866110",
-	appId: "1:82969866110:web:5a089299065444cbea0d2f",
-	measurementId: "G-DS4GRL509N"
+    apiKey: "AIzaSyAo96HVWzjQmXBRtVM0gtBt287gSmTDsFA",
+    authDomain: "prodraft-a5377.firebaseapp.com",
+    projectId: "prodraft-a5377",
+    storageBucket: "prodraft-a5377.firebasestorage.app",
+    messagingSenderId: "491994095062",
+    appId: "1:491994095062:web:dac72a72a1bb71429b1877",
+    measurementId: "G-HRRQG2JDQV"
 };
 
 /* Dev environment */
